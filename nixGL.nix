@@ -48,8 +48,7 @@ let
           name = "nvidia-x11-${version}-nixGL";
           inherit version;
           src = let
-            url =
-              "https://download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run";
+              url = "http://us.download.nvidia.com/tesla/${version}/NVIDIA-Linux-x86_64-${version}.run";
           in if sha256 != null then
             fetchurl { inherit url sha256; }
           else
